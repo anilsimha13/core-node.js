@@ -5,6 +5,10 @@ _Released on 2009 by Ryan Dahl_
 
 ## Table of Content
 
+[Episode - 00 | Welcome to Namaste Node.js](Episode-00-Welcome-to-Namaste-Node.js)
+[Episode - 01 | Introduction to Node.js](Episode-01-Introduction-to-Node.js)
+[Episode - 02 | JS on Server](Episode-02-JS-on-Server)
+
 ### Season - 1
 
 #### Episode - 00 | Welcome to Namaste Node.js
@@ -29,3 +33,14 @@ _Topics Covered_
   - Event-driven architecture
   - Asynchronous I/O
   - Open JS Foundation
+
+#### Episode - 02 | JS on Server
+
+_Topics Covered_
+
+- Node.js
+  - Written on C++
+  - V8 engine was written on C++
+  - V8 can be embedded into any C++ application
+  - V8 engine executes the Javascript language
+  - High Level(We write these programming language) >> Machine >> Assembly >> Binary code(Computer Understands)
