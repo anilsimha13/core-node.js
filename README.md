@@ -6,8 +6,11 @@ _Released on 2009 by Ryan Dahl_
 ## Table of Content
 
 [Episode - 00 | Welcome to Namaste Node.js](Episode-00-Welcome-to-Namaste-Node.js)
+
 [Episode - 01 | Introduction to Node.js](Episode-01-Introduction-to-Node.js)
+
 [Episode - 02 | JS on Server](Episode-02-JS-on-Server)
+
 [Episode - 03 | Let's write code](Episode-03-Lets-write-code)
 
 ### Season - 1
