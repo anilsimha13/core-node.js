@@ -8,6 +8,7 @@ _Released on 2009 by Ryan Dahl_
 [Episode - 00 | Welcome to Namaste Node.js](Episode-00-Welcome-to-Namaste-Node.js)
 [Episode - 01 | Introduction to Node.js](Episode-01-Introduction-to-Node.js)
 [Episode - 02 | JS on Server](Episode-02-JS-on-Server)
+[Episode - 03 | Let's write code](Episode-03-Lets-write-code)
 
 ### Season - 1
 
@@ -44,3 +45,18 @@ _Topics Covered_
   - V8 can be embedded into any C++ application
   - V8 engine executes the Javascript language
   - High Level(We write these programming language) >> Machine >> Assembly >> Binary code(Computer Understands)
+
+#### Episode - 03 | Let's write code
+
+_Topics Covered_
+
+- Installation of Node.js
+  - `node -v`
+  - `npm -v`
+  - REPL (_Read Evaluate Print Loop_)
+    - run `node` in your terminal
+- Global Object
+  - `window`,`this`,`self`,`frames` in broswer console points to Window object
+  - `global` in IDE
+  - `console.log(this);//Empty Object` from IDE
+  - `globalThis` should give you Window object in IDE and Browsers
