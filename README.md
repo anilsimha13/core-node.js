@@ -5,15 +5,13 @@ _Released on 2009 by Ryan Dahl_
 
 ## Table of Content
 
-[Episode - 00 | Welcome to Namaste Node.js](Episode-00-Welcome-to-Namaste-Node.js)
-
-[Episode - 01 | Introduction to Node.js](Episode-01-Introduction-to-Node.js)
-
-[Episode - 02 | JS on Server](Episode-02-JS-on-Server)
-
-[Episode - 03 | Let's write code](Episode-03-Lets-write-code)
-
 ### Season - 1
+
+- [Episode - 00 | Welcome to Namaste Node.js](#episode---00--welcome-to-namaste-nodejs)
+- [Episode - 01 | Introduction to Node.js](#episode---01--introduction-to-nodejs)
+- [Episode - 02 | JS on Server](#episode---02--js-on-server)
+- [Episode - 03 | Let's write code](#episode---03--lets-write-code)
+- [Episode - 04 | module.exports and require](#episode---04--moduleexports-and-require)
 
 #### Episode - 00 | Welcome to Namaste Node.js
 
@@ -63,3 +61,81 @@ _Topics Covered_
   - `global` in IDE
   - `console.log(this);//Empty Object` from IDE
   - `globalThis` should give you Window object in IDE and Browsers
+
+#### Episode - 04 | module.exports and require
+
+_Topics Covered_
+
+- `require` keyword is available thru out the node project
+- Modules are protectes their variables and functions from leaking
+
+**Common JS Module** (cjs)
+
+- `module.exports = {}` and `const {} = require('./fileName')`
+- `module.exports` is an empty object
+
+```js
+//sum.js
+var d = 10;
+
+function addTwoNumbers(a, b) {
+  console.log(a + b);
+}
+
+module.exports = { d, addTwoNumbers };
+```
+
+```js
+//app.js
+const { addTwoNumbers } = require("./sum");
+const { x, y } = require("./xyz");
+console.log("I am from App file");
+addTwoNumbers(x, y);
+var d = 99;
+console.log(d);
+```
+
+```js
+//xyz.js
+console.log("I am from XYZ file");
+
+var x = 10;
+var y = 20;
+
+module.exports = { x, y };
+```
+
+**ES Modules** (mjs)
+
+- `import` and `export`
+
+```json
+//package.json
+{
+  "type": "module"
+}
+```
+
+```js
+//app.js
+import { x, y } from "./xyz.js";
+import { d, addTwoNumbers } from "./sum.js";
+console.log("I am from App file");
+addTwoNumbers(x, y);
+console.log(d);
+```
+
+```js
+//sum.js
+export var d = 10;
+
+export function addTwoNumbers(a, b) {
+  console.log(a + b);
+}
+```
+
+```js
+//xyz.js
+export var x = 10;
+export var y = 20;
+```
