@@ -12,6 +12,7 @@ _Released on 2009 by Ryan Dahl_
 - [Episode - 02 | JS on Server](#episode---02--js-on-server)
 - [Episode - 03 | Let's write code](#episode---03--lets-write-code)
 - [Episode - 04 | module.exports and require](#episode---04--moduleexports-and-require)
+- [Episode - 05 | Diving into the Node.js github repo](#episode---05--diving-into-the-nodejs-github-repo)
 
 #### Episode - 00 | Welcome to Namaste Node.js
 
@@ -139,3 +140,16 @@ export function addTwoNumbers(a, b) {
 export var x = 10;
 export var y = 20;
 ```
+
+#### Episode - 05 | Diving into the Node.js github repo
+
+_Topics Covered_
+
+- All the modules we created in the project will be wraped inside a function by node.js while executing. Hence you cannot directly access the varialble/function
+- IIFE - Immediately Invoked Function Expression
+
+```js
+(function () {})();
+```
+
+- Keeps your variables and functions protected.
